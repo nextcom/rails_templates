@@ -32,7 +32,7 @@ $(document).ready(function(){
 CODE
 
 # Add application layout
-run "curl -L http://github.com/nextcom/rails_templates/raw/master/app/views/layouts/application.erb > app/views/layouts/application.html.erb"
+run "curl -L http://github.com/nextcom/rails_templates/raw/master/app/views/layouts/application.html.erb > app/views/layouts/application.html.erb"
   
 # Add Google Analytics partial
 run "curl -L http://github.com/nextcom/rails_templates/raw/master/app/views/shared/_google.html.erb > app/views/shared/_google.html.erb"
