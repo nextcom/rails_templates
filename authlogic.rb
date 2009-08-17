@@ -16,7 +16,7 @@ rake "db:migrate"
 run "curl -L http://github.com/nextcom/rails_templates/raw/master/app/controllers/application_controller.rb > app/controllers/application_controller.rb"
 
 # Set tests
-gsub_file "spec/spec_helper.rb", /#\s*(require "authlogic\/test_case)"/, '\1'
+gsub_file "spec/spec_helper.rb", /#\s*(require "authlogic\/test_case")/, '\1'
 run "curl -L http://github.com/nextcom/rails_templates/raw/master/spec/user_blueprints.rb >> spec/blueprints.rb"
 run "mkdir spec/controllers"
 run "curl -L http://github.com/nextcom/rails_templates/raw/master/spec/controllers/users_controller_spec.rb > spec/controllers/users_controller_spec.rb"
