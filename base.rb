@@ -11,7 +11,7 @@ run "rm -f public/javascripts/*"
 run "cp config/database.yml config/database.yml.example"
 
 # Setup stylesheets
-run "curl -L http://github.com/nextcom/rails_templates/tree/master/public/stylesheets/reset.css > public/stylesheets/reset.css"
+run "curl -L http://github.com/nextcom/rails_templates/raw/master/public/stylesheets/reset.css > public/stylesheets/reset.css"
 run "touch public/stylesheets/application.css"
   
 # Download JQuery
@@ -31,13 +31,13 @@ $(document).ready(function(){
 CODE
 
 # Add application layout
-run "curl -L http://github.com/nextcom/rails_templates/tree/master/app/views/layouts/application.html.erb > app/views/layouts/application.html.erb"
+run "curl -L http://github.com/nextcom/rails_templates/raw/master/app/views/layouts/application.html.erb > app/views/layouts/application.html.erb"
   
 # Add Google Analytics partial
-run "curl -L http://github.com/nextcom/rails_templates/tree/master/app/views/shared/_google.html.erb > app/views/shared/_google.html.erb"
+run "curl -L http://github.com/nextcom/rails_templates/raw/master/app/views/shared/_google.html.erb > app/views/shared/_google.html.erb"
 
 # Add application helpers
-run "curl -L http://github.com/nextcom/rails_templates/tree/master/app/helpers/application_helper.rb > app/helpers/application_helper.rb"
+run "curl -L http://github.com/nextcom/rails_templates/raw/master/app/helpers/application_helper.rb > app/helpers/application_helper.rb"
 
 # Install non-testing gems
 gem 'thoughtbot-paperclip', :lib => 'paperclip', :source => 'http://gems.github.com'
@@ -56,8 +56,8 @@ rake("gems:install", :sudo => true)
 # Setup testing env
 generate :rspec
 append_file "spec/spec.opts", "--drb"
-run "curl -L http://github.com/nextcom/rails_templates/tree/master/spec/spec_helper.rb > spec/spec_helper.rb"
-run "curl -L http://github.com/nextcom/rails_templates/tree/master/spec/blueprints.rb > spec/blueprints.rb"
+run "curl -L http://github.com/nextcom/rails_templates/raw/master/spec/spec_helper.rb > spec/spec_helper.rb"
+run "curl -L http://github.com/nextcom/rails_templates/raw/master/spec/blueprints.rb > spec/blueprints.rb"
 
 # Setup Git repository
 git :init
