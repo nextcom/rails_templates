@@ -18,12 +18,16 @@ run "curl -L http://github.com/nextcom/rails_templates/raw/master/app/controller
 # Set tests
 gsub_file "spec/spec_helper.rb", /#\s*(require "authlogic\/test_case)"/, '\1'
 run "curl -L http://github.com/nextcom/rails_templates/raw/master/spec/user_blueprints.rb >> spec/blueprints.rb"
+run "mkdir spec/controllers"
 run "curl -L http://github.com/nextcom/rails_templates/raw/master/spec/controllers/users_controller_spec.rb >> spec/controllers/users_controller_spec.rb"
 run "curl -L http://github.com/nextcom/rails_templates/raw/master/spec/controllers/user_sessions_controller_spec.rb >> spec/controllers/user_sessions_controller_spec.rb"
 
 # Set login and logout routes
 route "map.login 'login', :controller => 'user_sessions', :action => 'new'"
 route "map.logout 'logout', :controller => 'user_sessions', :action => 'destroy'"
+
+git :add => "."
+git :commit => "-m 'Add Authlogic and setup'"
 
 
 

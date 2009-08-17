@@ -72,6 +72,7 @@ db/*.sqlite3
 doc
 END
 
-git :add => ".", :commit => "-m 'Initial Commit'"
+git :add => "."
+git :commit => "-m 'Initial Commit'"
 
 
