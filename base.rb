@@ -35,6 +35,7 @@ CODE
 run "curl -L http://github.com/nextcom/rails_templates/raw/master/app/views/layouts/application.html.erb > app/views/layouts/application.html.erb"
   
 # Add Google Analytics partial
+run "mkdir app/views/shared"
 run "curl -L http://github.com/nextcom/rails_templates/raw/master/app/views/shared/_google.html.erb > app/views/shared/_google.html.erb"
 
 # Add application helpers
