@@ -25,13 +25,14 @@ run "rm public/javascripts/pngFix.zip"
   
 # Write jQuery.pngFix activation script
 append_file "public/javascripts/jquery.pngFix.js", <<-CODE
+
 $(document).ready(function(){ 
   $(document).pngFix(); 
 });
 CODE
 
 # Add application layout
-run "curl -L http://github.com/nextcom/rails_templates/raw/master/app/views/layouts/application.html.erb > app/views/layouts/application.html.erb"
+run "curl -L http://github.com/nextcom/rails_templates/raw/master/app/views/layouts/application.erb > app/views/layouts/application.html.erb"
   
 # Add Google Analytics partial
 run "curl -L http://github.com/nextcom/rails_templates/raw/master/app/views/shared/_google.html.erb > app/views/shared/_google.html.erb"
