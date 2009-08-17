@@ -10,6 +10,7 @@ generate :session, "user_session"
 generate :rspec_model, "user", "username:string", "email:string", "crypted_password:string", "password_salt:string", "persistence_token:string"
 run "curl -L http://github.com/nextcom/rails_templates/raw/master/app/models/user.rb > app/models/user.rb"
 run "curl -L http://github.com/nextcom/rails_templates/raw/master/app/controllers/users_controller.rb > app/controllers/users_controller.rb"
+run "curl -L http://github.com/nextcom/rails_templates/raw/master/app/controllers/user_sessions_controller.rb > app/controllers/user_sessions_controller.rb"
 rake "db:migrate"
 
 # Set controller and helper methods
