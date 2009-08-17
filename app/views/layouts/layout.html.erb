@@ -1,0 +1,28 @@
+<!DOCTYPE html >
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <!-- <link rel="icon" type="image/vnd.microsoft.icon" href="<%= path_to_image('site.ico') %>" /> -->
+    <title><%= yield :title %>COMPANY NAME HERE</title>
+    
+    <meta name="description" content="<%= yield :description %>" />
+    
+    <%= stylesheet_link_tag 'reset', 'application', :cache => 'application' %>
+    <%= yield :stylesheets %>
+    
+    <%= javascript_include_tag 'jquery', 'jquery.pngFix', :cache => 'jquery_with_plugins' %>
+    <%= yield :javascript %>
+    
+    <!--[if lte IE 6]>
+  		<%= stylesheet_link_tag 'ie_hacks' %>
+  	<![endif]-->
+  </head>
+  
+  <body>
+    
+    <%= yield %>
+    
+    <!-- Remember to edit shared/google.html.erb to add Google Analytics ID -->
+    <%= render :partial => 'shared/google' if Rails.env == 'production' %>
+  </body>
+</html>

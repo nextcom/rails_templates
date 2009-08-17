@@ -1,1 +1,0 @@
-# Base Rails app template
