@@ -20,7 +20,7 @@ run "curl -L http://jqueryjs.googlecode.com/files/jquery-1.3.2.min.js > public/j
 # Download jQuery.pngFix
 run "curl -L http://plugins.jquery.com/files/pngFix1.2.zip > public/javascripts/pngFix.zip"
 run "unzip public/javascripts/pngFix.zip -C jquery.pngFix.pack.js"
-run "mv public/javascripts/jquery.pngFix.pack.js public/javascripts/jquery.pngFix.js"
+run "mv jquery.pngFix.pack.js public/javascripts/jquery.pngFix.js"
 run "rm public/javascripts/pngFix.zip"
   
 # Write jQuery.pngFix activation script
